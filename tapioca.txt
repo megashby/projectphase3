@@ -1,0 +1,135 @@
+Smoothie Strawberry :3.42
+Smoothie Strawberry Mango:3.42
+Smoothie Strawberry Banana:3.42
+Smoothie Strawberry Kiwi:3.42
+Smoothie Strawberry Honeydew:3.42
+Smoothie Strawberry Watermelon:3.42
+Smoothie Strawberry Taro:3.42
+Smoothie Mango:3.42
+Smoothie Mango Banana:3.42
+Smoothie Mango Papaya:3.42
+Smoothie Mango Watermelon:3.42
+Smoothie Mango Pineapple:3.42
+Smoothie Banana:3.42
+Smoothie Banana Chocolate:3.42
+Smoothie Banana Taro:3.42
+Smoothie Honeydew:3.42
+Smoothie Papaya:3.42
+Smoothie Watermelon:3.42
+Smoothie Mixed Berry:3.42
+Smoothie Avocado:3.42
+Smoothie Durian Avocado:3.42
+Smoothie Coffee Avocado:3.42
+Smoothie Fresh Fruit Yogurt:3.42
+Juice Wintermelon:2.77
+Juice Plum:2.77
+Juice Passion Fruit:2.77
+Juice Grapefruit:2.77
+Juice Lemon and Honey:2.77
+Juice Honey and Egg:2.77
+Juice Kumquat and Lemon:2.77
+Juice Watermelon:2.77
+Juice Honeydew:2.77
+Juice Kiwi:3.05
+Juice Papaya:2.77
+Juice Carrot:3.75
+Juice Carrot Pineapple: 3.75
+Milk Tea Plain:2.77
+Milk Tea Oolong:3.00
+Milk Tea Honeydew:2.77
+Milk Tea Earl Grey:2.77
+Milk Tea Jasmine:2.77
+Milk Tea Honey Jasmine:2.77
+Milk Tea Taro:2.77
+Milk Tea Almond:3.00
+Milk Tea Almond Coconut:3.00
+Milk Tea Almond Honey:3.00
+Milk Tea Hazelnut:3.00
+Milk Tea Honey:2.77
+Milk Tea French Vanilla:3.00
+Milk Tea Barley:2.77
+Milk Tea Lavender:2.77
+Milk Tea Raspberry:3.00
+Milk Tea Rose:3.00
+Milk Tea Pumpkin:3.00
+Milk Tea Sesame:2.77
+Milk Tea Strawberry:2.77
+Milk Tea Chocolate:2.77
+Milk Tea Peppermint:2.77
+Milk Tea Mango:2.77
+Milk Tea Passion Fruit:2.77
+Milk Tea Peach:2.77
+Milk Tea Grape:2.77
+Milk Tea Green Apple:2.77
+Milk Tea Coffee:3.23
+Milk Tea Coconut:3.00
+Milk Tea Caramel:3.00
+Milk Tea Thai:3.00
+Milk Tea Ginger Milk(Hot):2.77
+Slushie Thai Tea:3.00
+Slushie Honeydew:3.00
+Slushie Green Bean:3.00
+Slushie Red Bean:3.00
+Slushie Coffee:3.05
+Slushie Plum:3.00
+Slushie Lemon:3.00
+Slushie Taro:3.00
+Slushie Taro Coconut:3.75
+Slushie Passion Fruit:3.00
+Slushie Strawberry:3.00
+Slushie Mango:3.00
+Slushie Strawberry Mango:3.00
+Slushie Blueberry:3.00
+Slushie Raspberry:3.00
+Slushie Grape:3.00
+Slushie Peach:3.00
+Slushie Lychee:3.00
+Slushie Coconut:3.23
+Slushie Yogurt:3.00
+Slushie Green Apple:3.00
+Slushie Longan:3.23
+Slushie Kiwi:3.00
+Slushie Mango Banana:3.42
+Slushie Strawberry Banana:3.42
+Classic Tea Jasmine Green:2.26
+Classic Tea Bubble Black:2.26
+Classic Tea Black Tea Latte:3.00
+Classic Tea Matcha Green:3.25
+Classic Tea Fresh Fruit Black:3.5
+Classic Tea Fresh Fruit Green:3.5
+Classic Tea Lychee Black:2.77
+Classic Tea Lychee Green:2.77
+Classic Tea Lemon Black:2.77
+Classic Tea Lemon Green:2.77
+Classic Tea Honey Black:2.77
+Classic Tea Honey Green:2.77
+Classic Tea Honey Lemon Black:2.77
+Classic Tea Honey Lemon Green:2.77
+Classic Tea Kumquat:2.77
+Classic Tea Plum and Kumquat:2.77
+Classic Tea Passion Fruit Black:2.77
+Classic Tea Passion Fruit Green:2.77
+Classic Tea Orange Black:2.77
+Classic Tea Orange Green:2.77
+Classic Tea Peppermint Black:3.00
+Classic Tea Peppermint Green:3.00
+Classic Tea Plum Black:2.77
+Classic Tea Plum Green:2.77
+Classic Tea Mango Black:2.77
+Classic Tea Mango Green:2.77
+Classic Tea Vanilla Black:3.00
+Classic Tea Vanilla Green:3.00
+Classic Tea Grape:2.77
+Classic Tea Kiwi Black:2.77
+Classic Tea Kiwi Green:2.77
+Classic Tea Peach Black:2.77
+Classic Tea Peach Green:2.77
+Classic Tea Rose Black:3.00
+Classic Tea Rose Green:3.00
+Classic Tea Pineapple Black:2.77
+Classic Tea Pineapple Green:2.77
+Classic Tea Strawberry Black:2.77
+Classic Tea Strawberry Green:2.77
+Classic Tea Green Apple:2.77
+Classic Tea Yogurt:2.77
+Classic Tea Grapefruit Green:2.77

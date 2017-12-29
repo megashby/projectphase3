@@ -1,0 +1,75 @@
+Milk Tea:Plain:Large:3.46
+Milk Tea:Plain:Medium:2.77
+Milk Tea:Almond:Large:3.46
+Milk Tea:Almond:Medium:2.77
+Milk Tea:Coconut:Large:3.46
+Milk Tea:Coconut:Medium:2.77
+Milk Tea:Ginger Milk(Hot):Large:3.46
+Milk Tea:Ginger Milk(Hot):Medium:2.77
+Milk Tea:Mango:Large:3.46
+Milk Tea:Mango:Medium:2.77
+Milk Tea:Thai:Large:3.46
+Milk Tea:Thai:Medium:2.77
+Slushie:Blueberry:Large
+Slushie:Green Mango:Large
+Slushie:Lychee:Large
+Slushie:Mango:Large
+Slushie:Passion Fruit:Large
+Slushie:Pineapple:Large
+Slushie:Strawberry:Large
+Slushie:Watermelon:Large
+Slushie:Yogurt:large
+Smoothie:Almond:Large:3.46
+Smoothie:Avocado:Large:3.46
+Smoothie:Blueberry:Large:3.46
+Smoothie:Capuccino:Large:3.46
+Smoothie:Coconut:Large:3.46
+Smoothie:Cookies 'N Cream:Large:3.46
+Smoothie:Fresh Fruit Yogurt:Large:3.46
+Smoothie:Frozen Mocha:Large
+Smoothie:Green Tea Latte:Large
+Smoothie:Honeydew:Large
+Smoothie:Mango:Large
+Smoothie:Papaya:Large
+Smoothie:Passion Fruit:Large
+Smoothie:Pina Colada:Large
+Smoothie:Pineapple:Large
+Smoothie:Red Bean:Large
+Smoothie:Strawberry:Large
+Smoothie:Strawberry Banana:Large
+Smoothie:Taro:Large
+Smoothie:Watermelon:Large 3.46
+Milk:Avocado:Large:3.93
+Milk:Avocado:Medium:3.23
+Milk:Banana:Large:3.93
+Milk:Banana:Medium:3.23
+Milk:Coconut:Large:3.46
+Milk:Coconut:Medium:2.77
+Milk:Papaya:Large:3.93
+Milk:Papaya:Medium:3.23
+Milk:Taro:Large:3.46
+Milk:Taro:Medium:2.77
+Milk:Watermelon:Large:3.93
+Milk:Watermelon:Medium:3.23
+Classic Tea:Black:Large:3.46
+Classic Tea:Black:Medium:2.77
+Classic Tea:Ginger:Large:3.46
+Classic Tea:Ginger:Medium:2.77
+Classic Tea:Honey Green:Large:3.46
+Classic Tea:Honey Green:Medium:2.77
+Classic Tea:Jasmine Green:Large:3.46
+Classic Tea:Jasmine Green:Medium:2.77
+Classic Tea:Mango Green:Large:3.46
+Classic Tea:Mango Green:Medium:2.77
+Classic Tea:Passion Fruit Green:Large:3.46
+Classic Tea:Passion Fruit Green:Medium:2.77
+Classic Tea:SOur PLum Green:Large:3.46
+Classic Tea:Sour Plum Green:Medium:2.77
+Classic Tea:Yogurt:Large:3.46
+Classic Tea:Yogurt:Medium:2.77
+Juice:Beauty:Large4.40
+Juice:Beauty:Medium3.70
+Juice:Carrot:Large4.40
+Juice:Carrot:Medium3.70
+Juice:Watermelon:Large3.93
+Juice:Watermelon:Medium3.23

@@ -1,0 +1,83 @@
+body{
+	background-color: #9ee094;
+	font-size:large;
+}
+
+h1 {
+	font-family: Helvetica, Arial; 
+	font-weight: bold;
+}
+
+h3 {
+	font-family: Helvetica, Arial; 
+}
+ul{
+	list-style: none;
+}
+
+.navigation{
+	background-color: #ffeec6;
+	color: black;
+	border-width: 1px;
+	border-color: #afada7;
+	border-style: solid;
+	margin: 0px 5px;
+
+}
+.navb{
+	min-height: 125px;
+	background: url(./pearls3.png) repeat;
+}
+.logo{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topnav{
+	background-color: #ffe6ad;
+}
+
+.topnav a{
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 18px;
+
+}
+
+.places{
+  background-color: #ffe6ad;
+  color: black;
+  width: 75%;
+  padding: 10px 10px;
+  margin: 15px auto;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  border-color: #afada7;
+}
+.affixed{
+	background-color: #9ee094;
+	max-width: 75%;
+}
+
+.info{
+	border-bottom: 3px solid #ef1a7a;
+}
+.pic{
+	border: 3px solid #ef1a7a;
+	min-width: 75%;
+}
+.footer{
+	border-top-color: black;
+	border-width: 1px;
+	background: url(./pearls3.png) repeat;
+}
+.text{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+td{
+	padding: 10px;
+}
+.comments{
+	vertical-align: text-top;
+}

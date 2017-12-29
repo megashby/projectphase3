@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Boba Tea Bargainer - Compare Prices</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./css/bootstrap.min.css" title="basic style" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="./comparepage.css" media="all"/>
+        <link rel="shortcut icon" type="image/x-icon" href="Logo.png" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+          var xhr;
+          if (window.ActiveXObject)
+          {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+            else if (window.XMLHttpRequest)
+          {
+            xhr = new XMLHttpRequest();
+          }
+
+          function callServer()
+          {
+            var size = document.getElementById("size").value;
+            var type = document.getElementById("type").value;
+            var flavor = document.getElementById("flavor").value;
+            var tops = document.getElementById("topping").value;
+ 
+            var url = "https://summer-2017.cs.utexas.edu/cs329e-mitra/jkon/Final_proj/findDrink.php?size="+size+"&type="+type+"&flavor="+flavor+"&tops="+tops;
+
+            xhr.open("GET",url,true);
+            xhr.onreadystatechange = updatePage;
+            xhr.send(null);
+          }
+
+          function updatePage(){
+                //window.alert(xhr.readyState);
+                //window.alert(xhr.status);
+                if ((xhr.readyState == 4) && (xhr.status == 200))
+                {
+                  var response = xhr.responseText.split(",");
+		  var add = ["Tapioca House", "Coco's Cafe", "Kung Fu Tea"];
+		  var minPrice = 10.0;
+		  var index = 10;
+//window.alert("hello");
+		  for (var i=0; i<3;i++){
+		    if(response[i]<minPrice && response[i]>1){
+			minPrice = parseFloat(response[i]);
+			index = i;
+		    }
+		  }
+		  if(minPrice==10){
+		    document.getElementById("Ans").innerHTML = "Sorry, you designed a drink that doesn't exist";
+		  }
+		  else{
+		    document.getElementById("Ans").innerHTML = "The cheapest price is $"+minPrice.toFixed(2)+" at "+add[index];
+		  }
+            }
+           }
+        </script>
+
+</head>
+
+<body>
+    <div class = "row">
+        <div class = "navb col-sm-12">
+<a href ="https://summer-2017.cs.utexas.edu/cs329e-mitra/jkon/Final_proj/Webpage.html"> <img src="./Logo.png" class="logo immg-resizable" alt="logo" width="286" height="168"></a>
+        </div>
+           </div>
+
+  <nav class="navbar navbar-default topnav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./Webpage.html">Boba Tea Bargainer</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="./comparepage.html">Compare Prices</a></li>
+      <li><a href="./History.php">History of Boba Tea</a></li>
+      <li><a href="./MakeTea.html">Making Boba Tea</a></li>
+      <li><a href="./ContactUsTrial.php" class="active">Contact Us!</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "row">
+  <div class = "col-sm-12">
+    <div class = "jumbotron">
+      <h1>Price Comparison</h1>
+      <p>You're only four steps away from getting the best price on Boba Tea in West Campus!</p>
+    </div>
+  </div>
+</div>
+        <!-- Body -->
+        <div class="container-fluid">
+        <form id = "SelectDrink">
+        <div class = "row">
+          <div class = "col-sm-3">
+          <h2>Step 1: <br>Select Drink Type</h2><hr>
+              <div class="dropdown">
+                <!-- <button class="btn btn-info mybtn dropdown-toggle" type="button" data-toggle="dropdown">Drink Type
+                <span class="caret"></span></button> -->
+                <select  id = "type" name="type" align="center">
+                  <option>Milk Tea</option>
+                  <option>Smoothie</option>
+                  <option>Slushie</option>
+                  <option>Milk</option>
+                  <option>Classic Tea</option>
+                  <option>Juice</option>
+                </select>
+            </div>
+          </div>
+          <div class = "col-sm-3">
+          <h2>Step 2: <br>Select Drink Flavor</h2><hr>
+              <div class="dropdown" align="center">
+                <!-- <button class="btn btn-info mybtn dropdown-toggle" type="button" data-toggle="dropdown">Drink Flavor
+                <span class="caret"></span></button> -->
+                <select id="flavor" name="flavor">
+                  <option>Plain</option>
+                  <option>Barley</option>
+                  <option>Almond</option>
+                  <option>Almond Coconut</option>
+                  <option>Almond Honey</option>
+                  <option>Caramel</option>
+                  <option>Chocolate</option>
+                  <option>Coconut</option>
+                  <option>Coffee</option>
+                  <option>Earl Grey</option>
+                  <option>French Vanilla</option>
+                  <option>Ginger Milk(Hot)</option>
+                  <option>Grape</option>
+                  <option>Green Apple</option>
+                  <option>Green</option>
+                  <option>Hazelnut</option>
+                  <option>Honey</option>
+                  <option>Honeydew</option>
+                  <option>Honey Jasmine</option>
+                  <option>Jasmine</option>
+                  <option>Lavender</option>
+                  <option>Mango</option>
+                  <option>Oolong</option>
+                  <option>Passion Fruit</option>
+                  <option>Peach</option>
+                  <option>Peppermint</option>
+                  <option>Pumpkin</option>
+                  <option>Raspberry</option>
+                  <option>Rose</option>
+                  <option>Sesame</option>
+                  <option>Strawberry</option>
+                  <option>Taro</option>
+                  <option>Taro Green</option>
+                  <option>Thai</option>
+                  <option>Wintermelon Green</option>
+                  </select>
+            </div>
+          </div>
+          <div class = "col-sm-3">
+          <h2>Step 3: <br>Select Drink Topping</h2><hr>
+            <div class="dropdown">
+                <!-- <button class="btn btn-info mybtn dropdown-toggle" type="button" data-toggle="dropdown">Drink Toppings
+                <span class="caret"></span></button> -->
+                <select id="topping" name="topping" align="center">
+                  <option>Pearls</option>
+                  <option>Pearls(Small)</option>
+                  <option>Sea Salt Cream</option>
+                  <option>Green Apple Jelly</option>
+                  <option>Lychee Jelly</option>
+                  <option>Grass Jelly</option>
+                  <option>Pineapple Jelly</option>
+                  <option>Rainbow Jelly</option>
+                  <option>Mango Star Jelly</option>
+                  <option>Coffee Jelly</option>
+                  <option>Egg Pudding</option>
+                  <option>Aloe Vera Jelly</option>
+                  <option>Passion Fruit Popping</option>
+                  <option>Q-Balls</option>
+                  <option>Mango Popping</option>
+                  <option>Lychee Popping</option>
+                  <option>Almond Pudding</option>
+                  <option>Nata Jelly</option>
+                  <option>Red Bean</option>
+                  <option>Mung Bean</option>
+                  <option>Herbal Jelly</option>
+                  <option>Pudding</option>
+                  <option>Oreo</option>
+                  <option>None</option>
+                </select>
+            </div>
+            </div>
+	    <div class = "col-sm-3">
+            <h2> Step 4: <br>Select Drink Size</h2><hr>
+             <div class="dropdown">
+               <!--  <button class="btn btn-info mybtn dropdown-toggle" type="button" data-toggle="dropdown">Drink Size
+                <span class="caret"></span></button> -->
+                <select id = "size" name="size" align="center">
+                <option>Medium (16oz)</option>
+ 				<option>Large (20oz)</option>
+                </select>
+            </div>
+          </div>
+      </div>
+      <br><br><br>
+      <div class="row">
+        <div class="col-sm-12" align="center">
+                <input type="button" name="compare" value="Go!" class="sub" onclick="callServer();">
+        </div>
+      </div>
+    </form>
+  </div>
+
+ <script type="text/javascript">
+
+                var milktea = {'Plain':'ctk','Barley':'t','Almond':'ctk', 'Almond Coconut':'t','Almond Honey':'t','Caramel':'t','Chocolate':'t','Coconut':'ctk','Coffee':'tk','Earl Grey':'t','French Vanilla':'t','Ginger Milk(Hot)':'ct','Grape':'t','Green Apple':'t','Green':'k','Hazelnut':'t','Honey':'tk','Honeydew':'t','Honey Jasmine':'t','Jasmine':'t','Lavender':'t','Mango':'ct','Oolong':'tk','Passion Fruit':'t','Peach':'t','Peppermint':'t','Pumpkin':'t','Raspberry':'t','Rose':'t','Sesame':'t','Strawberry':'t','Taro':'tk','Taro Green':'k','Thai':'ct','Wintermelon Green':'k'};
+                var slushies = {'Blueberry':'ct','Coconut':'t','Coffee':'ct','Honeydew':'t','Grape':'t','Green Apple':'t','Green Mango':'c','Green Bean':'t','Kiwi':'t','Lemon':'t','Longan':'t','Lychee':'ct','Mango':'ctk','Mango Banana':'t','Mango Papaya':'t','Matcha Red Bean':'k','Mung Bean':'k','Passion Fruit':'ctk','Peach':'t','Pineapple':'ck','Pina Colada':'k','Plum':'t','Raspberry':'t','Red Bean':'tk','Strawberry':'ct','Strawberry Banana':'t','Strawberry Mango':'t','Strawberry Milk':'k','Taro':'tk','Taro Coconut':'t','Thai Tea':'t','Watermelon':'ct','Yogurt':'ct'};
+                var smoothie = {'Almond':'c','Avocado':'ct','Banana':'t','Banana Chocolate':'t','Banana Taro':'t','Blueberry':'c','Capuccino':'c','Coconut':'c','Cookies N Cream':'c','Coffee Avocado':'t','Durain Avocado':'t','Fresh Fruit Yogurt':'ct','Frozen Mocha':'c','Green Tea Latte':'c','Honeydew':'ct','Mango':'ct','Mango Banana':'t','Mango Papaya':'t','Mango Pineapple':'t','Mango Watermelon':'t','Mixed Berry':'t','Papaya':'ct','Passion Fruit':'c','Pina Colada':'c','Pineapple':'c','Red Bean':'c','Strawberry':'ct','Strawberry Banana':'ct','Strawberry Honeydew':'t','Strawberry Kiwi':'t','Strawberry Mango':'t','Strawberry Taro':'t','Strawberry Watermelon':'t','Taro':'c','Watermelon':'ct'};
+                var milk = {'Avocado':'c','Banana':'c','Coconut':'c','Chai':'k','Ginger':'k','Matcha':'k','Papaya':'c','Taro':'c','Watermelon':'c'};
+                var classicTea = {'Black':'kc','Black Tea Latte':'t','Bubble Black':'t','Fresh Fruit Black':'t','Fresh Fruit Green':'t','Ginger':'ct','Grape':'t','Grapefruit Green':'tk','Green':'k','Green Apple':'t','Honey':'k','Honey Black':'tk','Honey Green':'ctk','Honey Lemon Black':'t','Honey Lemon Green':'t','Jasmine Black':'t','Jasmine Green':'ct','Kiwi Black':'t','Kiwi Green':'t','Kumquat':'t','Lemon Black':'tk','Lemon Green':'tk','Lychee Black':'t','Lychee Green':'t','Mango Black':'t','Mango Green':'ctk','Matcha Green':'tk','Longan':'tk','Oolong':'k','Orange Black':'t','Orange Green':'tk','Passion Fruit Black':'t','Passion Fruit Green':'ctk','Peach Black':'t', 'Peach Green':'t','Peach Oolong':'k','Peppermint Black':'t','Peppermint Green':'t','Pineapple Black':'t','Pineapple Green':'t','Plum Black':'t','Plum Green':'t','Plum and Kumquat':'t','Pomelo':'k','Sour Plum Green':'c','Rose Black':'t','Rose Green':'t','Sunshine Pineapple':'k','Strawberry Black':'t','Strawberry Green':'t','Strawberry Lemon Green':'k','Vanilla Black':'t','Vanilla Green':'t','Veryberry Green':'k','Wintermelon':'k','Wintermelon Green':'k','Yogurt':'ct'};
+                var juice = {'Beauty':'c','Carrot':'ct','Carrot Pineapple':'t','Grapefruit':'t','Honeydew':'t','Honey and Egg':'t','Honey Lemonade':'k','Kiwi':'t','Kumquat and Lemon':'t','Lychee Punch':'k','Papaya':'t','Passion Fruit':'t','Plum':'t','Watermelon':'ct'};
+
+                var tap = ['Pearls','Pearls(Small)','Sea Salt Cream','Green Apple Jelly','Lychee Jelly','Grass Jelly','Pineapple Jelly','Rainbow Jelly','Mango Star Jelly','Coffee Jelly','Egg Pudding','Aloe Vera Jelly','Passion Fruit Popping','Q-Balls','Mango Popping','Lychee Popping','None'];
+                var coco = ['Pearls','Egg Pudding','Almond Pudding','Green Apple Jelly','Lychee Jelly','Grass Jelly','Pineapple Jelly','Rainbow Jelly','None'];
+                var kung =['Pearls','Nata Jelly','Red Bean','Mung Bean','Herbal Jelly','Pudding','Oreo','None'];
+
+                $(document).ready(function(){
+                    $("#type").change(function(){
+                        var select = $("#flavor");
+                        var style = type.value;
+                        if(style == 'Milk Tea'){
+                                select.empty();
+                                for(var key in milktea){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+                        else if(style == 'Smoothie'){
+                                select.empty();
+                                for(var key in smoothie){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+                        else if(style == 'Slushie'){
+                                select.empty();
+                                for(var key in slushies){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+                        else if(style == 'Milk'){
+                                select.empty();
+                                for(var key in milk){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+                        else if(style == 'Classic Tea'){
+                                select.empty();
+                                for(var key in classicTea){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+                        else if(style = 'Juice'){
+                                select.empty();
+                                for(var key in juice){
+                                        select.append('<option>'+key+'</option>');
+                                }
+                        }
+
+                        var flav = flavor.value;
+                        var select = $("#topping");
+                        var tops =[];
+                        var final=[];
+                        select.empty();
+
+                        if(style == 'Milk Tea'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (milktea[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (milktea[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (milktea[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Smoothie'){
+                                if(smoothie[flav].includes('c') && !smoothie[flav].includes('t') && !smoothie[flav].includes('k')){
+                                        $("#size").empty();
+                                        $("#size").append('<option>Large (20oz)</option>');
+                                }
+                                else{
+                                        $("#size").empty();
+                                        $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+                                }
+                                select.empty();
+
+                                if (smoothie[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (smoothie[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (smoothie[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Slushie'){
+                                if(slushies[flav].includes('c') && !slushies[flav].includes('t') && !slushies[flav].includes('k')){
+                                        $("#size").empty();
+                                        $("#size").append('<option>Large (20oz)</option>');
+                                }
+                                else{
+                                        $("#size").empty();
+                                        $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+                                }
+
+                                select.empty();
+                                if (slushies[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (slushies[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (slushies[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Classic Tea'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (classicTea[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (classicTea[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (classicTea[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Milk'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (milk[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (milk[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (milk[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Juice'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (juice[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (juice[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (juice[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+			var top = topping.value;
+	                    var select2 = $("#size");
+	                    select2.empty();
+
+	                    if(coco.indexOf(top)!=-1 && kung.indexOf(top)==-1 && tap.indexOf(top)==-1 && (style=='Smoothie' || style=='Slushie')){
+	                    	select2.append('<option>Large (20oz)</option>');
+	                    }
+	                    else{
+	                    	select2.append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+	                    }
+                    });
+                    $("#flavor").change(function(){
+                        var style = type.value;
+                        var flav = flavor.value;
+                        var select = $("#topping");
+                        var tops =[];
+                        var final=[];
+                        select.empty();
+
+                        if(style == 'Milk Tea'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (milktea[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (milktea[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (milktea[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Smoothie'){
+                                if(smoothie[flav].includes('c') && !smoothie[flav].includes('t') && !smoothie[flav].includes('k')){
+                                        $("#size").empty();
+                                        $("#size").append('<option>Large (20oz)</option>');
+                                }
+                                else{
+                                        $("#size").empty();
+                                        $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+                                }
+                                select.empty();
+
+                                if (smoothie[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (smoothie[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (smoothie[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Slushie'){
+                                if(slushies[flav].includes('c') && !slushies[flav].includes('t') && !slushies[flav].includes('k')){
+                                        $("#size").empty();
+                                        $("#size").append('<option>Large (20oz)</option>');
+                                }
+                                else{
+                                        $("#size").empty();
+                                        $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+                                }
+
+                                select.empty();
+                                if (slushies[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (slushies[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (slushies[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Classic Tea'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (classicTea[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (classicTea[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (classicTea[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Milk'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (milk[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (milk[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (milk[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+                        else if(style == 'Juice'){
+                                $("#size").empty();
+                                $("#size").append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+
+                                select.empty();
+                                if (juice[flav].includes('t')){
+                                        for(var i=0; i<tap.length; i++){
+                                                tops.push(tap[i]);
+                                        }
+                                }
+                                if (juice[flav].includes('k')){
+                                        for(i=0; i<kung.length; i++){
+                                                tops.push(kung[i]);
+                                        }
+                                }
+                                if (juice[flav].includes('c')){
+                                        for(i=0; i<coco.length; i++){
+                                                tops.push(coco[i]);
+                                        }
+                                }
+                                tops.sort();
+                                $.each(tops, function(i, el){
+                                        if($.inArray(el, final) === -1) final.push(el);
+                                        });
+
+                                for(j=0; j<final.length; j++){
+                                        select.append('<option>'+final[j]+'</option>');
+                                }
+                                //select.append('<option>None</option>');
+                        }
+			var top = topping.value;
+	                    var select2 = $("#size");
+	                    select2.empty();
+
+	                    if(coco.indexOf(top)!=-1 && kung.indexOf(top)==-1 && tap.indexOf(top)==-1 && (style=='Smoothie' || style=='Slushie')){
+	                    	select2.append('<option>Large (20oz)</option>');
+	                    }
+	                    else{
+	                    	select2.append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+	                    }
+                });
+		$("#topping").change(function(){
+					var select = $("#size");
+					var style = type.value;
+                    var flav = flavor.value;
+                    var top = topping.value;
+                    select.empty();
+
+                    if(coco.indexOf(top)!=-1 && kung.indexOf(top)==-1 && tap.indexOf(top)==-1 && (style=='Smoothie' || style=='Slushie')){
+                    	select.append('<option>Large (20oz)</option>');
+                    }
+                    else if (smoothie[flav] == 'c' || slushies[flav] == 'c'){
+                      select.empty();
+                      select.append('<option>Large (20oz)</option>');
+                    }
+                    else{
+                    	select.append('<option>Medium (16oz)</option><option>Large (20oz)</option>');
+                    }
+		});
+        });
+</script>
+
+  <br>
+  <br>
+  <br>
+
+  <p class='ans' id="Ans" align="center"></p>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <!-- Footer -->
+    <div class="container-fluid">
+        <div class="row">
+                <div class="text-center footer">
+                        <div class="text">
+                                <p>Copyright Jatin Konchady and Marguerite Ashby</p>
+                                <p>June 2017</p>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+
+<!-- <script type = 'text/javascript'>
+$(".dropdown-menu li a").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+'<span class="caret"></span>');
+});
+</script> -->
+
+</body>
+</html>
+
+
+
+
+
+

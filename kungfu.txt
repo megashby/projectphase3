@@ -1,0 +1,26 @@
+
+Classic Tea:Longan:Large:4.00
+Classic Tea:Longan:Medium:3.00
+Classic Tea:Orange Green:Large:4.50
+Classic Tea:Orange Green:Medium:3.50
+Classic Tea:Passion Fruit Green:Large:4.50
+Classic Tea:Passion Fruit Green:Medium:3.50
+Classic Tea:Peach Oolong:Large:4.50
+Classic Tea:Peach Oolong:Medium:3.50
+Classic Tea:Pomelo:Large:4.00
+Classic Tea:Pomelo:Medium:3.00
+Classic Tea:Sunshine Pineapple:Large:4.50
+Classic Tea:Sunshine Pineapple:Medium:3.50
+Classic Tea:Strawberry Lemon Green:Large:4.50
+Classic Tea:Strawberry Lemon Green:Medium:3.50
+Classic Tea:Veryberry Green:Large:4.50
+Classic Tea:Veryberry Green:Medium:3.50
+Classic Tea:Wintermelon Green:Large:4.00
+Classic Tea:Wintermelon Green:Medium:3.00
+Juice:Honey Lemonade:Large:4.00
+Juice:Honey Lemonade:Medium:3.00
+Juice:Lychee Punch:Large:4.50
+Juice:Lychee Punch:Medium:3.50
+
+
+
